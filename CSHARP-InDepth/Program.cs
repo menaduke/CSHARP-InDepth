@@ -30,10 +30,10 @@ namespace CSHARP_InDepth
 
         static void ImplementAsynchrony()
         {
-            #region Asynchrony 1.1.3 START
+            #region Asynchrony 1.1.4 START
             Asynchrony CSHARP_InDepth_114 = new Asynchrony();
             CSHARP_InDepth_114.MainInitializerAsync();
-            #endregion Asynchrony 1.1.3 END
+            #endregion Asynchrony 1.1.4 END
         }
 
     }
