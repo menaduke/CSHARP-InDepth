@@ -31,6 +31,12 @@ namespace CSHARP_InDepth._2._1
             aDictionary.Add("key1", 1);
             aDictionary.Add("key2", 3);
             Console.WriteLine($"dictionary<string,int>: {JsonConvert.DeserializeObject(JsonConvert.SerializeObject(aDictionary))}, size: {aDictionary.Count}");
+            Console.WriteLine($"lets try making a tuple");
+            Tuple<int, int> tuple = generateTupleGenerics(2, 6);
+            Console.WriteLine($"here's the tuple {tuple}");
+            var tupleRef = Tuple.Create(1, 2, 3, 4, 5, 6, 7, 8); // natively the create method goes up to 8 tuple items
+            Console.WriteLine($"here's the tuple {tupleRef}");
+
         }
         public string[] GenerateArrayStringNames()
         {
@@ -72,6 +78,16 @@ namespace CSHARP_InDepth._2._1
         {
             Dictionary<Key, Value> genericTypeDictionary = new Dictionary<Key, Value>();
             return genericTypeDictionary;
+        }
+
+        public Tuple<T1, T2> generateTupleGenerics<T1, T2>(T1 value1, T2 value2)
+        {
+            return new Tuple<T1, T2>(value1, value2);
+        }
+
+        public Tuple<T1, T2, T3> Create<T1, T2, T3>(T1 item1, T2 item2, T3 item3)
+        {
+            return new Tuple<T1, T2, T3>(item1, item2, item3);
         }
     }
 }

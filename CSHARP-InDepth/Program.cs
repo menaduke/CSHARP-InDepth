@@ -19,7 +19,7 @@ namespace CSHARP_InDepth
             #endregion 1.1.4
 
             #region 2.1
-            //ImplementGenerics();
+            ImplementGenerics();
             #endregion 2.1
         }
 
